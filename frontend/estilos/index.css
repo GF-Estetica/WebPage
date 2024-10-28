@@ -1,0 +1,192 @@
+* {
+    font-family: 'Poppins', sans-serif; /* Cambia Montserrat por Poppins */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f9f9f9, #f5d5e0); /* Degradado con rosa suave */
+    color: #333;
+}
+
+/* Estilos base para el nav */
+nav {
+    width: calc(100% - 20px);
+    margin: 10px;
+    background: linear-gradient(to right,  #d85380, #ec3472);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 0;
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+    border-radius: 20px;
+}
+
+/* Estilos para la lista */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste */
+}
+
+/* Espaciado de los elementos de la lista */
+nav li {
+    margin: 0 22px; /* Ajustado para reducir espacio entre elementos */
+}
+
+/* Estilo de los enlaces */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, font-size 0.3s, text-shadow 0.3s;
+    position: relative;
+}
+
+/* Efecto de subrayado */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 2px;
+    background: rgb(223, 124, 178);
+    border-radius: 4px;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+nav a:hover {
+    color: #ffd0e0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Estilos para el botón de menú en pantallas pequeñas */
+.menu-toggle {
+    display: none; /* Oculta por defecto */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem; /* Tamaño del icono */
+    margin-bottom: 5px; /* Espacio debajo del botón */
+    margin-left: 20px;
+}
+
+/* Mostrar el botón de menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    nav ul.show {
+        display: flex; /* Muestra el menú cuando se active */
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón de menú */
+    }
+}
+
+
+
+
+.logo {
+    width: 60px; /* Tamaño del logo en el nav */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-right: 10px; /* Espacio entre el logo y los items del nav */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh; /* Espacio para contenido */
+    text-align: center;
+    padding-top: 50px; /* Espaciado superior */
+}
+
+.logo {
+    width: 56px; /* Tamaño del logo en el nav */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-right: 10px; /* Espacio entre el logo y los items del nav */
+    transition: transform 0.3s; /* Efecto de transformación */
+}
+
+nav a:hover .logo {
+    transform: scale(1.1); /* Aumenta el logo al pasar el mouse */
+}
+
+h1 {
+    font-size: 3.6rem;
+    margin-bottom: 0.5rem;
+    color: #f15c8e; /* Rosa más pomposo */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra del texto */
+    transition: transform 0.3s; /* Efecto de transformación */
+}
+
+h1:hover {
+    transform: translateY(-5px); /* Eleva el título al pasar el mouse */
+}
+
+.btn {
+    background-color: #e77a9f; /* Rosa más pomposo */
+    color: white;
+    padding: 12px 25px; /* Espaciado del botón */
+    border: none;
+    border-radius: 25px; /* Bordes redondeados más suaves */
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.btn:hover {
+    background-color: #e04e7f; /* Rosa más pomposo */
+    transform: scale(1.05); /* Aumenta el tamaño del botón al pasar el mouse */
+}
+
+
+footer {
+    width: 100%; /* 100% del ancho */
+    background-color: rgb(17, 17, 17); /* Fondo negro */
+    padding: 5px 0; /* Espaciado interno más bajo */
+    position: sticky; /* Mantiene el footer en la parte inferior */
+    bottom: 0; /* Posición inferior */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    text-align: center; /* Centra el texto */
+}
+
+footer p {
+    color: rgb(168, 168, 168); /* Color del texto del footer */
+    margin: 0; /* Quita margen por defecto */
+    font-size: 0.72rem; /* Tamaño de fuente más pequeño */
+}
+
+.welcome-text {
+    display: inline; /* Mostrar por defecto */
+}
+
+.brand-text {
+    display: inline; /* Mostrar por defecto */
+}
+
+@media (max-width: 768px) {
+    .welcome-text {
+        display: none; /* Oculta el texto "Bienvenido a" en pantallas pequeñas */
+    }
+    .brand-text{
+        font-size: 4.6rem;
+    }
+}

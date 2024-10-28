@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura */
+    background: linear-gradient(to bottom, #f9f9f9, #f5bed1); /* Fondo degradado suave */
+}
+
+h1 {
+    text-align: center;
+    color: #ff4281;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    width: 80%; /* Asegura que el formulario tenga un ancho del 80% de la pantalla */
+    max-width: 800px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centra el formulario */
+    padding: 20px; /* Espacio interno */
+    background: #ffffff; /* Fondo blanco con un ligero toque de color */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espaciado entre los campos */
+    padding: 10px; /* Padding interno para mayor espacio alrededor */
+    border: 1px solid #da8ca6; /* Borde rosa claro alrededor del grupo */
+    border-radius: 5px; /* Bordes redondeados para el grupo */
+    background: #fef4f7; /* Fondo rosa suave para cada grupo */
+}
+
+.button-container {
+    display: flex; /* Habilita flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    width: 100%; /* Asegura que ocupe el ancho completo del formulario */
+    margin-top: 20px; /* Espaciado superior para separar del contenido anterior */
+}
+
+
+label {
+    display: block; /* Muestra la etiqueta en bloque */
+    margin-bottom: 5px; /* Espaciado inferior */
+    color: #333; /* Color de la etiqueta */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #d1869f; /* Cambia el borde al enfocarse */
+}
+
+.btn {
+    background-color: #ff4080; /* Rosa más pomposo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e04e7f; /* Cambia el color al pasar el mouse */
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.social-cards, .contact-info {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+h2 {
+    color: #f15c8e;
+    margin-bottom: 15px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-card img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-card img:hover {
+    transform: scale(1.1);
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+.flag-icon,
+.social-icon {
+    width: 20px; /* Tamaño inicial de la bandera y de los iconos de redes sociales */
+    height: auto;
+    transition: transform 0.3s ease; /* Transición suave para el agrandamiento */
+}
+
+.flag-icon:hover,
+.social-icon:hover {
+    transform: scale(1.2); /* Agranda las imágenes un 20% al pasar el mouse */
+}
+

@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura */
+    background: linear-gradient(to bottom, #f9f9f9, #f5bed1); /* Degradado de fondo */
+}
+
+h1 {
+    text-align: center;
+    color: #ff4281;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    max-width: 1000px; /* Aumenta el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Espaciado interno */
+}
+
+.faq-item {
+    background: #ffffff; /* Fondo blanco para mayor contraste */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 15px 0; /* Espacio entre preguntas */
+    padding: 20px; /* Espaciado interno */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para el hover */
+}
+
+.faq-item:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Aumenta la sombra en hover */
+}
+
+h2 {
+    color: #ec4c81; /* Color de los subtítulos */
+    margin: 0 0 10px; /* Margen inferior */
+}
+
+p {
+    color: #666; /* Color del texto */
+    margin: 0; /* Quita el margen por defecto */
+}

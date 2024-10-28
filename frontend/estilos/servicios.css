@@ -1,0 +1,87 @@
+body {
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura */
+    background: linear-gradient(to bottom, #ffdfea, #e985a6); /* Degradado suave */
+}
+
+h1 {
+    text-align: center;
+    color: #ff4281;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px; /* Espacio interno */
+}
+
+.service-item {
+    display: flex; /* Flex para alineación */
+    background: #f9f9f9; /* Fondo gris claro para cada tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Esconde desbordamientos */
+    padding: 15px; /* Espaciado interno de la tarjeta */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para el hover */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Aumenta la sombra en hover */
+}
+
+.service-image {
+    width: 150px; /* Ancho fijo de la imagen */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Asegura que la imagen no se estire */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+    transition: transform 0.3s; /* Transición para la imagen */
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Borde sutil */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.service-item:hover .service-image {
+    transform: scale(1.05); /* Aumenta un poco la imagen al pasar el mouse */
+}
+
+.service-info {
+    padding: 10px; /* Espaciado interno para el texto */
+    flex: 1; /* Para que tome el espacio disponible */
+}
+
+h2 {
+    color: #ec4c81; /* Color de los subtítulos */
+    margin: 0 0 5px; /* Margen inferior para separación */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombreado sutil */
+}
+
+p {
+    color: #666; /* Color del texto */
+    margin: 0; /* Quita el margen por defecto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombreado sutil */
+}
+
+/* Ajuste responsive para el grid en pantallas pequeñas */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Pasa a una sola columna en pantallas pequeñas */
+    }
+
+    .service-image {
+        max-width: 100px; /* Ajuste de ancho máximo de imagen en pantallas pequeñas */
+        margin-right: 10px; /* Ajusta el margen en pantallas pequeñas */
+    }
+
+    .service-item {
+        flex-direction: column; /* Cambia la disposición de las tarjetas a vertical en pantallas pequeñas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-info {
+        padding: 0; /* Ajusta padding para mejorar presentación en pantalla pequeña */
+    }
+}
